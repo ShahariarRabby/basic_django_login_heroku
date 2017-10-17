@@ -27,7 +27,7 @@ SECRET_KEY = '^)*u-$f)+_o3(a3fxwq0g1*0y)4gh4@%s87bynb6o=r#9aw47v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysterious-shore-56643.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
