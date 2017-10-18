@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Base</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
             integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
@@ -27,8 +27,21 @@
         <a class="nav-link" href="{% url 'admin:index' %}">Admin <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'basic_app:other' %}">Other</a>
+        <a class="nav-link" href="{% url 'basic_app:register' %}">Registration</a>
       </li>
+        {% if user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+      </li>
+            {% else %}
+                  <li class="nav-item">
+        <a class="nav-link" href="{% url 'basic_app:user_login' %}">Login</a>
+      </li>
+        {% endif %}
+
+
+
+
     </ul>
   </div>
 </nav>
